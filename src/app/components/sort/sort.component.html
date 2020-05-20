@@ -1,8 +1,24 @@
-<div class="d-flex">
+<button class="btn-grigger" (click)="showOverlay()"><i class="fa fa-sort"></i> Sort</button>
+
+<div class="d-flex outer" [ngClass]="{'show-overlay': showOverlayFlag}">
     <h4>Sort By</h4>
 
-    <button (click)="sortBy('high-low')" [ngClass]="{'active': sortByVal == 'high-low'}">Price -- High Low</button>
-    <button (click)="sortBy('low-high')" [ngClass]="{'active': sortByVal == 'low-high'}">Price -- Low High</button>
-    <button (click)="sortBy('discount')" [ngClass]="{'active': sortByVal == 'discount'}">Discount</button>
+    <div class="overlay">
+        <div class="overlay-body">
+            <div class="overlay-content">
+                <p>Sort Options</p>
+                <button (click)="sortBy('high-low')" class="btn-sort"
+                    [ngClass]="{'active': sortByVal == 'high-low'}">Price -- High Low</button>
+                <button (click)="sortBy('low-high')" class="btn-sort"
+                    [ngClass]="{'active': sortByVal == 'low-high'}">Price -- Low High</button>
+                <button (click)="sortBy('discount')" class="btn-sort"
+                    [ngClass]="{'active': sortByVal == 'discount'}">Discount</button>
 
+            </div>
+            <div class="d-flex overlay-footer">
+                <button (click)="cancel()">Cancel</button>
+                <button (click)="cancel()">Apply</button>
+            </div>
+        </div>
+    </div>
 </div>

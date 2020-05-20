@@ -9,6 +9,7 @@ export class SortComponent implements OnInit {
 
   @Output() sortByType = new EventEmitter<string>();
   sortByVal: string;
+  showOverlayFlag: boolean = false;
 
   constructor() { }
 
@@ -18,6 +19,13 @@ export class SortComponent implements OnInit {
   sortBy(type){
     this.sortByVal = type;
     this.sortByType.emit(type);
+  }
+  cancel() {
+    this.showOverlayFlag = false;
+  }
+
+  showOverlay() {
+    this.showOverlayFlag = true;
   }
 
 }

@@ -1,17 +1,35 @@
-<h4>Filters</h4>
+<button class="btn-grigger" (click)="showOverlay()"><i class="fa fa-filter"></i> Filter</button>
 
-<div class="text-center">
-    <div class="form-control">
-        <div class="slider-value">
-            <div>&#8377;{{value[0]}}</div>
-            <div>&#8377;{{value[1]}}</div>
+<div class="outer" [ngClass]="{'show-overlay': showOverlayFlag}">
+    <h4>Filters</h4>
+
+    <div class="overlay">
+        <div class="overlay-body text-center">
+            <div class="overlay-content">
+                <p>Filter Options</p>
+                <div class="form-control">
+                    <div class="slider-value">
+                        <div>&#8377;{{value[0]}}</div>
+                        <div>&#8377;{{value[1]}}</div>
+                    </div>
+                    <mv-slider [(value)]="value" tooltip="hide" [min]="100" range="true" [max]="100000"
+                        [enabled]="enabled" (change)="change()">
+                    </mv-slider>
+                    <div class="text-center text-small mb-2">Price</div>
+                </div>
+
+                <div class="form-control">
+                    <input type="button" value="Apply" [disabled]="disableApplyBtn" class="btn btn-blue"
+                        (click)="applyFilter()">
+                </div>
+            </div>
+            <div class="d-flex overlay-footer">
+                <button (click)="cancel()">Cancel</button>
+                <button (click)="applyFilter()">Apply</button>
+            </div>
         </div>
-        <mv-slider [(value)]="value" tooltip="hide" [min]="100" range="true" [max]="100000" [enabled]="enabled" (change)="change()">
-        </mv-slider>
-        <div class="text-center text-small mb-2">Price</div>
+
+
     </div>
 
-    <div class="form-control">
-        <input type="submit" value="Apply" [disabled]="disableApplyBtn" class="btn btn-blue" (click)="applyFilter()">
-    </div>
 </div>
