@@ -1,0 +1,5 @@
+<a routerLink="cart" *ngIf="count > 0; else countZero">
+    <i class="fa fa-shopping-cart"></i><span>{{count}}</span>
+</a>
+
+<ng-template #countZero><i class="fa fa-shopping-cart"></i></ng-template>

@@ -1,0 +1,8 @@
+<div class="d-flex">
+    <h4>Sort By</h4>
+
+    <button (click)="sortBy('high-low')" [ngClass]="{'active': sortByVal == 'high-low'}">Price -- High Low</button>
+    <button (click)="sortBy('low-high')" [ngClass]="{'active': sortByVal == 'low-high'}">Price -- Low High</button>
+    <button (click)="sortBy('discount')" [ngClass]="{'active': sortByVal == 'discount'}">Discount</button>
+
+</div>

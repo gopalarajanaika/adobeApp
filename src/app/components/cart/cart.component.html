@@ -1,0 +1,48 @@
+<div class="d-grid col-4" *ngIf="cartItems?.length > 0">
+    <div class="one-four">
+        <div *ngFor="let item of cartItems;let i = index" class="cart-items">
+            <div class="cart-img text-center"><img [src]="item.image" alt="" class="img-fluid"></div>
+            <div class="d-grid cart-details">
+                <div class="pl-2">
+                    <div class="pb-1">{{item.name}}</div>
+                    <div class="pb-2">
+                        <span class="actual-price">&#8377;{{item.price?.actual}} </span>
+                        <span class="display-price"> {{item.price?.display}}</span>
+                        <span class="discount"> {{item.discount}}% off</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn-rounded" (click)="incDec(i, '-')">-</button>
+                    <input type="number" [(ngModel)]="item.count" (ngModelChange)="updateCount()">
+                    <button class="btn-rounded" (click)="incDec(i, '+')">+</button>
+                </div>
+                <div>
+                    <button class="btn-remove" (click)="removeItem(i)">REMOVE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cart-summary-container" *ngIf="cartItems?.length > 0">
+        <div class="summary">
+            <h5>PRICE DETAILS</h5>
+            <hr>
+            <div class="p-2 summary-body">
+                <div>Price ( {{count}} {{count > 1 ? 'items' : 'item'}})</div>
+                <div>:</div>
+                <div class="text-right">&#8377;{{display}}</div>
+                <div>Discount</div>
+                <div>:</div>
+                <div class="text-right">&#8377;{{discount}}</div>
+            </div>
+            <hr class="hr-footer">
+            <strong>
+            <div class="p-2 d-flex justify-content-between">
+                <div>Total Payable</div>
+                <div>&#8377;{{actual}}</div>
+            </div>
+        </strong>
+        </div>
+    </div>
+</div>
+<h4 *ngIf="!cartItems || cartItems?.length == 0">No items</h4>

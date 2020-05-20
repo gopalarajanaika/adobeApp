@@ -1,0 +1,17 @@
+<h4>Filters</h4>
+
+<div class="text-center">
+    <div class="form-control">
+        <div class="slider-value">
+            <div>&#8377;{{value[0]}}</div>
+            <div>&#8377;{{value[1]}}</div>
+        </div>
+        <mv-slider [(value)]="value" tooltip="hide" [min]="100" range="true" [max]="100000" [enabled]="enabled" (change)="change()">
+        </mv-slider>
+        <div class="text-center text-small mb-2">Price</div>
+    </div>
+
+    <div class="form-control">
+        <input type="submit" value="Apply" [disabled]="disableApplyBtn" class="btn btn-blue" (click)="applyFilter()">
+    </div>
+</div>

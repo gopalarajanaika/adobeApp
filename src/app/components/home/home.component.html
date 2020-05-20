@@ -1,0 +1,25 @@
+<div class="shopping-layout">
+    <div class="filter-container">
+        <app-filter (filterRange)="applyFilter($event)"></app-filter>
+    </div>
+    <div class="sort-container">
+        <app-sort (sortByType)="sortByType($event)"></app-sort>
+    </div>
+    <div class="shopping-container">
+        <div class="shopping-products-container" *ngIf="items?.length > 0">
+            <div class="grid-item" *ngFor="let item of items;let i = index;">
+                <div class="text-center bg-light mb-2"><img [src]="item.image" alt="" class="img-fluid"></div>
+                <div class="pb-2">{{item.name}}</div>
+                <div class="pb-2">
+                    <span class="actual-price">&#8377;{{item.price?.actual}} </span>
+                    <span class="display-price"> {{item.price?.display}}</span>
+                    <span class="discount"> {{item.discount}}% off</span>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-add" (click)="addToCart(item)">Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,174 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~bootstrap-slider/dist/css/bootstrap-slider.min.css";
+
+:root {
+  --theme-color: #2874f0;
+  --orange-color: #ffc300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f4f4f4;
+  padding-bottom: 30px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.d-grid{
+  display: grid;
+}
+
+.shopping-layout{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.filter-container{
+    grid-row: 1/3;
+}
+.filter-container, .sort-container{
+    padding: 15px;
+}
+
+.shopping-products-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  .grid-item {
+  padding: 15px;
+}
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+.display-price{
+    color: #878787;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.actual-price{
+    font-weight: 500;
+}
+
+.discount{
+    color: #388e3c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.img-fluid{
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.bg-light{
+    background-color: #fff;
+}
+.p-2{
+    padding: 1rem;
+}
+.mb-1{
+    margin-bottom: 0.5rem;
+}
+.mb-2{
+    margin-bottom: 1rem;
+}
+
+.pb-1{
+    padding-bottom: 0.5rem;
+}
+.pb-2{
+    padding-bottom: 1rem;
+}
+.pl-2{
+    padding-left: 1rem;
+}
+
+.text-small{
+    font-size: 80%;
+}
+
+.btn{
+    padding: 6px 10px;
+    border: none;
+    border-radius: 20px;
+    margin: auto;
+    font-weight: 600;
+}
+
+.btn:disabled{
+    opacity: 0.5;
+}
+
+.btn-add{
+    background-color: var(--orange-color);
+}
+
+.btn-blue{
+    background-color: var(--theme-color);
+    color: #ffffff;
+    padding: 6px 15px;
+    font-weight: normal;
+}
+
+
+//price slider
+
+.slider-track-low, .slider-track-high {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 5px;
+    margin-top: 0px;
+}
+
+.slider-handle {
+    width: 15px;
+    height: 15px;
+    background-image: none;
+    background-color: #ffffff;
+    border: 1px solid #00000063;
+}
+
+.slider-selection {
+    background-color: #2874f0;
+    background-image: none;
+}
+
+.slider.slider-horizontal {
+    height: 9px;
+}

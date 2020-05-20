@@ -1,0 +1,20 @@
+
+button {
+    background: transparent;
+    border: transparent;
+    outline: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #878787;
+    border-bottom: 1.5px solid transparent
+}
+
+button.active{
+    color: var(--theme-color);
+    border-bottom: 1.5px solid var(--theme-color);
+}
+
+h4{
+    margin: 0;
+    margin-right: 20px;
+}

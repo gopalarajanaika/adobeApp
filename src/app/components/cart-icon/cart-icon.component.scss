@@ -1,0 +1,19 @@
+a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  margin-right: 1.5rem;
+}
+
+a span {
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    padding: 2px 4px 3px 2px;
+    top: -3px;
+    font-size: 11px;
+    min-width: 20px;
+    text-align: center;
+}
