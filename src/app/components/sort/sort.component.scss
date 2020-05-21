@@ -23,5 +23,14 @@ h4 {
   .btn-sort {
     display: block;
     margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+    &.active {
+      color: #878787;
+      border-bottom: 1.5px solid transparent;
+      .fa{
+        color: var(--theme-color);
+      }
+  }
   }
 }

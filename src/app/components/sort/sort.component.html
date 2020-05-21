@@ -8,11 +8,11 @@
             <div class="overlay-content">
                 <p>Sort Options</p>
                 <button (click)="sortBy('high-low')" class="btn-sort"
-                    [ngClass]="{'active': sortByVal == 'high-low'}">Price -- High Low</button>
+                    [ngClass]="{'active': sortByVal == 'high-low'}"><i class="fa fa-dot-circle-o d-none d-sm-block"> </i> Price -- High Low</button>
                 <button (click)="sortBy('low-high')" class="btn-sort"
-                    [ngClass]="{'active': sortByVal == 'low-high'}">Price -- Low High</button>
+                    [ngClass]="{'active': sortByVal == 'low-high'}"><i class="fa fa-dot-circle-o d-none d-sm-block"></i> Price -- Low High</button>
                 <button (click)="sortBy('discount')" class="btn-sort"
-                    [ngClass]="{'active': sortByVal == 'discount'}">Discount</button>
+                    [ngClass]="{'active': sortByVal == 'discount'}"><i class="fa fa-dot-circle-o d-none d-sm-block"></i>  Discount</button>
 
             </div>
             <div class="d-flex overlay-footer">

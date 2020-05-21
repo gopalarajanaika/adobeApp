@@ -44,7 +44,9 @@ button {
 .d-grid {
   display: grid;
 }
-
+.d-none{
+  display: none;
+}
 .shopping-layout {
   display: grid;
   grid-template-columns: auto auto;
@@ -260,7 +262,17 @@ button {
 
 }
 
-@media(max-width: 768px) {
+@media(min-width: 768px) {
+  .d-md-block{
+    display: initial;;
+  }
+
+}
+
+  @media(max-width: 767px) {
+  .d-sm-block{
+    display: initial;
+  }
   .shopping-layout {
     display: block;
   }
