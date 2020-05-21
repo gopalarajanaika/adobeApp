@@ -9,6 +9,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getProducts(){
-    return this.http.get("/assets/data/cart.json");
+    return this.http.get("/adobeApp/assets/data/cart.json");
   }
 }
