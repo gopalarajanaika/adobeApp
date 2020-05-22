@@ -1,0 +1,39 @@
+.search-container {
+  margin-right: 15px;
+}
+
+.form-control {
+  position: relative;
+  height: 25px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #FFF;
+  width: 250px;
+  height: 100%;
+  color: #fff;
+  outline: none;
+  display: none;
+  transition: all 0.5s;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.btn-search {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  outline: none;
+}
+
+.show-search{
+    display: initial;;
+}

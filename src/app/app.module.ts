@@ -14,6 +14,7 @@ import { SortComponent } from './components/sort/sort.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CartIconComponent } from './components/cart-icon/cart-icon.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CartIconComponent } from './components/cart-icon/cart-icon.component';
     SortComponent,
     FilterComponent,
     FooterComponent,
-    CartIconComponent
+    CartIconComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

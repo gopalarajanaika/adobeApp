@@ -7,7 +7,7 @@
     </div>
     <div class="shopping-container">
         <div class="shopping-products-container" *ngIf="items?.length > 0">
-            <div class="grid-item" *ngFor="let item of items;let i = index;">
+            <div class="grid-item" *ngFor="let item of items | search: searchText;let i = index;">
                 <div class="text-center bg-light mb-2"><img [src]="item.image" alt="" class="img-fluid"></div>
                 <div class="pb-2">{{item.name}}</div>
                 <div class="pb-2">

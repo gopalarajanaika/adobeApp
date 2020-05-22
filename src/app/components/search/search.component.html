@@ -1,1 +1,8 @@
-<i class="fa fa-search"></i>
+<div class="search-container d-flex">
+    <div class="form-control">
+        <input type="text" placeholder="Search" [ngClass]="{'show-search': showsearchFlag}" [(ngModel)]="searchText" (ngModelChange)="updateSearch()">
+        <button class="btn-search" (click)="showsearchFlag = !showsearchFlag">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</div>

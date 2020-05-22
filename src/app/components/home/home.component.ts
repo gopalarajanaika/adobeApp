@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit{
   minPrice:number = 100;
   maxPrice:number = 100000;
   itemsTemp: any = [];
+  searchText:string;
 
   constructor(
     private dataService: DataService,
@@ -22,8 +23,19 @@ export class HomeComponent implements OnInit{
   ) {}
 
   ngOnInit() {
+    console.log("home");
+    this.sharedService.cartItemsObs.subscribe((res) => {
+      this.cartItems = res;
+    });
+    this.sharedService.searchTextObs.subscribe((res:string) => {
+      this.searchText = res;
+      // console.log(res);
+      
+    });
     this.getProducts();
   }
+
+
   addToCart(item) {
     let index = this.cartItems.findIndex((x) => x.name == item.name);
     if (index == -1) {
